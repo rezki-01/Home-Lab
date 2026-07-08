@@ -1,7 +1,24 @@
 # 🖥️ Homelab — Infrastructure d'entreprise virtualisée
 
 
-Proje\`
+Projet personnel de homelab visant à reproduire l'infrastructure réseau et
+système d'une PME (annuaire, DNS/DHCP, pare-feu, supervision, sécurité)
+entièrement virtualisée sur mon PC.
+
+📌 Je documente mon avancement ici et sur LinkedIn : **[lien vers ton profil]**
+
+---
+
+## 🎯 Objectifs du projet
+
+- Construire un réseau d'entreprise segmenté et réaliste (LAN interne / DMZ / segment sécurité)
+- Mettre en pratique l'administration système et réseau (AD, DNS, DHCP, pare-feu, GPO)
+- M'entraîner à la supervision et à la détection d'intrusion
+- Documenter proprement le projet comme un vrai portfolio technique
+
+## 🏗️ Architecture
+
+\`\`\`
                          INTERNET (NAT)
                               │
                         ┌─────▼─────┐
@@ -15,6 +32,7 @@ Proje\`
    • WSUS / Fichiers     • DNS secondaire     • Wazuh (SIEM)
    • Client Windows 11                        • Kali (isolée)
    • Client Debian
+\`\`\`
 
 Schéma détaillé et plan d'adressage : [`docs/architecture.md`](docs/architecture.md)
 Schéma modifiable (draw.io) : [`docs/schema-reseau.drawio`](docs/schema-reseau.drawio)
@@ -49,8 +67,9 @@ homelab-sisr/
 ├── README.md
 ├── docs/
 │   ├── architecture.md       # Schéma réseau, plan d'adressage, matrice de flux
-│   ├── schema-reseau.drawio  # Schéma réseau modifiable
-│   ├── PROGRESS.md           # Journal d'avancement
+│   ├── schema-reseau.drawio  # Schéma réseau modifiable (draw.io)
+│   ├── PROGRESS.md           # Journal d'avancement (source pour LinkedIn)
+│   ├── LINKEDIN_TEMPLATES.md # Templates de posts
 │   ├── phase-1-pfsense.md
 │   ├── phase-2-active-directory.md
 │   ├── phase-3-services.md
@@ -61,23 +80,9 @@ homelab-sisr/
 
 ## 📖 Journal de bord
 
-Chaque étape est documentée dans `docs/` avec : objectif, étapes suivies, difficultés rencontrées et captures d'écran.
+Chaque étape est documentée dans `docs/` avec : objectif, étapes suivies,
+difficultés rencontrées et captures d'écran.
 
 ## 📝 Licence
 
-Projet personnel — libre de réutilisation à but d'apprentissage.t personnel de homelab visant à reproduire l'infrastructure réseau et
-système d'une PME (annuaire, DNS/DHCP, pare-feu, supervision, sécurité)
-entièrement virtualisée sur mon PC.
-
----
-
-## 🎯 Objectifs du projet
-
-- Construire un réseau d'entreprise segmenté et réaliste (LAN interne / DMZ / segment sécurité)
-- Mettre en pratique l'administration système et réseau (AD, DNS, DHCP, pare-feu, GPO)
-- M'entraîner à la supervision et à la détection d'intrusion
-- Documenter proprement le projet comme un vrai portfolio technique
-
-## 🏗️ Architecture
-
-\`\`
+Projet personnel — libre de réutilisation à but d'apprentissage.

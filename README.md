@@ -5,7 +5,6 @@ Projet personnel de homelab visant à reproduire l'infrastructure réseau et
 système d'une PME (annuaire, DNS/DHCP, pare-feu, supervision, sécurité)
 entièrement virtualisée sur mon PC.
 
-📌 Je documente mon avancement ici et sur LinkedIn : **[lien vers ton profil]**
 
 ---
 
@@ -34,8 +33,6 @@ entièrement virtualisée sur mon PC.
    • Client Debian
 \`\`\`
 
-Schéma détaillé et plan d'adressage : [`docs/architecture.md`](docs/architecture.md)
-Schéma modifiable (draw.io) : [`docs/schema-reseau.drawio`](docs/schema-reseau.drawio)
 
 ## 🧰 Stack technique
 

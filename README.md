@@ -17,7 +17,7 @@ entièrement virtualisée sur mon PC.
 
 ## 🏗️ Architecture
 
-\`\`\`
+'''
                          INTERNET (NAT)
                               │
                         ┌─────▼─────┐
@@ -31,7 +31,7 @@ entièrement virtualisée sur mon PC.
    • WSUS / Fichiers     • DNS secondaire     • Wazuh (SIEM)
    • Client Windows 11                        • Kali (isolée)
    • Client Debian
-\`\`\`
+'''
 
 
 ## 🧰 Stack technique
@@ -59,7 +59,7 @@ Suivi détaillé et journal d'avancement : [`docs/PROGRESS.md`](docs/PROGRESS.md
 
 ## 📂 Structure du repo
 
-\`\`\`
+'''
 homelab-sisr/
 ├── README.md
 ├── docs/
@@ -73,7 +73,7 @@ homelab-sisr/
 │   ├── phase-4-supervision-securite.md
 │   └── phase-5-documentation.md
 └── screenshots/               # Captures d'écran des configs / dashboards
-\`\`\`
+'''
 
 ## 📖 Journal de bord
 

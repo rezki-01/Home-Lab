@@ -1,0 +1,87 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Architecture Homelab SISR" id="homelab-archi">
+    <mxGraphModel dx="1200" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Internet -->
+        <mxCell id="internet" value="INTERNET" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="480" y="40" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- pfSense -->
+        <mxCell id="pfsense" value="pfSense&#10;Firewall / Routeur / VPN" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=13;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="460" y="150" width="180" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" edge="1" parent="1" source="internet" target="pfsense">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Zone LAN interne -->
+        <mxCell id="zoneLAN" value="LAN INTERNE — 192.168.10.0/24" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=none;strokeColor=#82b366;dashed=1;fontSize=13;fontStyle=1;fontColor=#82b366;spacingTop=10" vertex="1" parent="1">
+          <mxGeometry x="80" y="280" width="280" height="420" as="geometry" />
+        </mxCell>
+
+        <mxCell id="dc01" value="DC01 — Windows Server 2022&#10;AD DS / DNS / DHCP / GPO&#10;192.168.10.10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="110" y="330" width="220" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="srv01" value="SRV01 — Windows Server 2022&#10;WSUS / Fichiers&#10;192.168.10.11" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="110" y="400" width="220" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="pccli" value="PC-CLI — Windows 11&#10;Client joint au domaine&#10;DHCP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="110" y="470" width="220" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="pclnx" value="PC-LNX — Debian 12&#10;Client Linux&#10;DHCP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="110" y="540" width="220" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Zone DMZ -->
+        <mxCell id="zoneDMZ" value="DMZ — 192.168.20.0/24" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=none;strokeColor=#b85450;dashed=1;fontSize=13;fontStyle=1;fontColor=#b85450;spacingTop=10" vertex="1" parent="1">
+          <mxGeometry x="440" y="280" width="220" height="220" as="geometry" />
+        </mxCell>
+
+        <mxCell id="web01" value="WEB01 — Debian 12&#10;Site web (Nginx)&#10;192.168.20.10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="460" y="330" width="180" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="dns2" value="DNS secondaire&#10;192.168.20.11" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="460" y="400" width="180" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Zone Sécu / Supervision -->
+        <mxCell id="zoneSEC" value="SEGMENT SÉCU / SUPERVISION — 192.168.30.0/24" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=none;strokeColor=#6c8ebf;dashed=1;fontSize=13;fontStyle=1;fontColor=#6c8ebf;spacingTop=10" vertex="1" parent="1">
+          <mxGeometry x="720" y="280" width="260" height="420" as="geometry" />
+        </mxCell>
+
+        <mxCell id="sup01" value="SUP01 — Debian 12&#10;Zabbix / Centreon&#10;192.168.30.10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="750" y="330" width="200" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="siem01" value="SIEM01 — Debian 12&#10;Wazuh (SIEM)&#10;192.168.30.11" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="750" y="400" width="200" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="atk01" value="ATK01 — Kali Linux&#10;VM pentest (isolée)&#10;192.168.30.20" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="750" y="470" width="200" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Connexions pfSense -> zones -->
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.25;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="pfsense" target="zoneLAN">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="pfsense" target="zoneDMZ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.75;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="pfsense" target="zoneSEC">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

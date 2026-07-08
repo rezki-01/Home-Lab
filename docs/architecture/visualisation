@@ -1,1 +1,18 @@
+Architecture réseau
 
+Schéma
+
+```
+                         INTERNET (NAT)
+                              │
+                        ┌─────▼─────┐
+                        │  pfSense  │  Pare-feu / Routeur / VPN
+                        └─────┬─────┘
+              ┌───────────────┼───────────────────┐
+              │                │                    │
+   LAN INTERNE 10.0/24   DMZ 20.0/24         ZONE SÉCURITÉ 30.0/24
+   ─────────────────     ─────────────       ─────────────────────
+   • AD DS / DNS / DHCP  • Serveur Web        • Zabbix / Centreon
+   • WSUS / Fichiers     • DNS secondaire     • Wazuh (SIEM)
+   • Client Windows 11                        • Kali (isolée)
+   • Client Debian

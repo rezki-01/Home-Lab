@@ -1,22 +1,7 @@
 # 🖥️ Homelab — Infrastructure d'entreprise virtualisée
 
 
-Projet personnel de homelab visant à reproduire l'infrastructure réseau et
-système d'une PME (annuaire, DNS/DHCP, pare-feu, supervision, sécurité)
-entièrement virtualisée sur mon PC.
-
----
-
-## 🎯 Objectifs du projet
-
-- Construire un réseau d'entreprise segmenté et réaliste (LAN interne / DMZ / segment sécurité)
-- Mettre en pratique l'administration système et réseau (AD, DNS, DHCP, pare-feu, GPO)
-- M'entraîner à la supervision et à la détection d'intrusion
-- Documenter proprement le projet comme un vrai portfolio technique
-
-## 🏗️ Architecture
-
-\`\`\`
+Proje\`
                          INTERNET (NAT)
                               │
                         ┌─────▼─────┐
@@ -80,4 +65,19 @@ Chaque étape est documentée dans `docs/` avec : objectif, étapes suivies, dif
 
 ## 📝 Licence
 
-Projet personnel — libre de réutilisation à but d'apprentissage.
+Projet personnel — libre de réutilisation à but d'apprentissage.t personnel de homelab visant à reproduire l'infrastructure réseau et
+système d'une PME (annuaire, DNS/DHCP, pare-feu, supervision, sécurité)
+entièrement virtualisée sur mon PC.
+
+---
+
+## 🎯 Objectifs du projet
+
+- Construire un réseau d'entreprise segmenté et réaliste (LAN interne / DMZ / segment sécurité)
+- Mettre en pratique l'administration système et réseau (AD, DNS, DHCP, pare-feu, GPO)
+- M'entraîner à la supervision et à la détection d'intrusion
+- Documenter proprement le projet comme un vrai portfolio technique
+
+## 🏗️ Architecture
+
+\`\`
